@@ -5,13 +5,11 @@
 var reverseString = function(s) {
     let left = 0;
     let right = s.length - 1;
-    let mid = Math.floor(right / 2);
     
-    while ( left <= mid && right >= mid ){
-        let leftValue = s[left]; // temporary value
+    while ( left < right){
+        let temp = s[left]; // temporary value
         s[left] = s[right];
-        s[right] = leftValue;
-        
+        s[right] = temp;
         left++;
         right--;
     }    
